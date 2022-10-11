@@ -1,0 +1,110 @@
+#logo{
+    width: 475px;
+    animation: my_move 5s;
+}
+
+@keyframes my_move {
+    from {width: 25px;}
+    to {width: 475px;}
+    from {opacity: 0;}
+    to {opacity: 1;}
+
+} 
+
+body{
+    background-image: url("../images/concrete_seamless.png");
+    font-family: 'Poppins', serif;
+    background-color:#f1f1f1;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav_links{
+    display: flex;
+    flex-direction: column;
+
+}
+a:visited {
+    color: #0000EE;
+}
+/* ONLY those header elements that are direct children of a card class. */
+
+.card > header{
+    background: #288088;
+    border: 2px solid #45adad;
+    padding: 20px 0px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+div .card{
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 450px;
+}
+
+.pricing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+.gallery{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.gallery img{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+    height: 230px;
+}
+@media screen and (min-width: 800px){
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .pricing{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction:row;
+        flex-wrap: wrap;
+    }
+    .card{
+        flex: 0 0 275px;
+    }
+    /*Modify the first header (the one not inside main) so that it remains visible at the top of the screen even as we scroll down. Make sure that it is always visible.*/
+    #stick:first-of-type{
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+}
+@media screen and (prefers-reduced-motion: reduce){
+    #logo{
+      animation: none;
+    }
+  }
