@@ -1,3 +1,5 @@
+/* Micah Blackburn */
+
 #logo{
     width: 475px;
     animation: my_move 5s;
@@ -165,3 +167,5 @@ div .card{
         content: "\1F44D";
     }
 }
+
+
